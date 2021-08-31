@@ -21,7 +21,7 @@ while True:
           if new_value != mydata:
                mydata=new_value
                f = open('scoutingdata.csv', 'a+')
-               f.write(mydata+'/n')
+               f.write(mydata + "\n")
                f.close()
 
      cv2.imshow('Result', img)
