@@ -22,24 +22,52 @@
           </div>
         </div>
 
-      <table>
-        <tr>
-          <th class="first-col"></th>
-          <th>Red</th>
-          <th>Blue</th>
-          <th class="second-col"></th>
-          <th>Starting Position</th>
-          <th>Cross Initation Line</th>
-        </tr>
-        <tr>
-          <td class="first-col">Alliance Color</td>
-          <td><input type="radio" value="red team" name="interest" id="redtxt" /></td>
-          <td><input type="radio" value="blue team" name="interest" id="bluetxt" /></td>
-          <td><input type="checkbox" /></td>
-          <td><input type="checkbox" value="started middle" name="interest" id="startmid" /></td>
-          <td><input type="checkbox" value="crossed line" name="interest" id="line" /></td>
-        </tr>
-      </table>
+        <table style="width: 100%;">
+          <colgroup>
+            <col style=" width:10%;">
+            <col style=" width:40%;">
+            <col style=" width:10%;">
+            <col style=" width:40%;">
+          </colgroup>
+        <thead>
+          <tr>
+            <th>Alliance Color</th>
+            <th>Starting Position</th>
+            <th>Crossed Auton Line</th>
+            <th>Autonomus Pts.</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <div class="question">
+              <label><input type="radio" value="Red" name='Alliance'> <span>Red</span></label>
+              <label><input type="radio" value="Blue" name='Alliance'> <span>Blue</span></label>
+            </div>
+          </td>
+              <td>
+                <div class="question">
+                  <label><input type="radio" value="Left" name='StartPos'> <span>L</span></label>
+                  <label><input type="radio" value="Left Middle" name='StartPos'> <span>LM</span></label>
+                  <label><input type="radio" value="Middle" name='StartPos'> <span>M</span></label>
+                  <label><input type="radio" value="Right Middle" name='StartPos'> <span>RM</span></label>
+                  <label><input type="radio" value="Right" name='StartPos'> <span>R</span></label>
+                </div>
+              </td>
+              <td>
+                <div class="question">
+                  <label style="color:black"><input type="radio" value="Yes" name='CrossAutonLine'> <span>Yes</span></label>
+                  <label style="color:black"><input type="radio" value="No" name='CrossAutonLine'> <span>No</span></label>
+                </div>
+              </td>
+              <td>
+                <div>
+                  <input style='width:10%' type="number" value='0' id='AutonPts' >
+                </div>
+              </td>
+          </tr>
+        </tbody>
+        </table>
 
       <table style="width: 100%;">
         <colgroup>
@@ -60,41 +88,34 @@
         <tr>
           <td>1</td>
             <td>
-              <div class="checkboxes">
-                <label><input type="checkbox" value="1" id="scored1"> <span>Label  x</span></label>
-                <label><input type="checkbox" value="2" id="scored2"> <span>Label  y</span></label>
-                <label><input type="checkbox" value="3" id="scored3"> <span>Label  z</span></label>
-                <label><input type="checkbox" value="4" id="scored4"> <span>Label  z</span></label>
-                <label><input type="checkbox" value="5" id="scored5"> <span>Label  z</span></label>
+              <div class="question">
+                <label><input type="radio" value="1" name='Made'> <span>1</span></label>
+                <label><input type="radio" value="2" name='Made'> <span>2</span></label>
+                <label><input type="radio" value="3" name='Made'> <span>3</span></label>
+                <label><input type="radio" value="4" name='Made'> <span>4</span></label>
+                <label><input type="radio" value="5" name='Made'> <span>5</span></label>
               </div>
             </td>
             <td>
-              <div class="checkboxes">
-                <label style="color:black"><input type="checkbox" value="scored high" id='Shigh'> <span>High</span></label>
-                <label style="color:black"><input type="checkbox" value="scored low" id='Slow'> <span>Low</span></label>
+              <div class="question">
+                <label style="color:black"><input type="radio" value="scored high" name='ScoreHeight'> <span>High</span></label>
+                <label style="color:black"><input type="radio" value="scored low" name='ScoreHeight'> <span>Low</span></label>
               </div>
             </td>
             <td>
-              <div class="checkboxes">
-                <label><input type="checkbox"> <span>Label  x</span></label>
-                <label><input type="checkbox"> <span>Label  y</span></label>
-                <label><input type="checkbox"> <span>Label  z</span></label>
-                <label><input type="checkbox"> <span>Label  z</span></label>
-                <label><input type="checkbox"> <span>Label  z</span></label>
+              <div class="question">
+                <label><input type="radio" value="1" name='Missed'> <span>1</span></label>
+                <label><input type="radio" value="2" name='Missed'> <span>2</span></label>
+                <label><input type="radio" value="3" name='Missed'> <span>3</span></label>
+                <label><input type="radio" value="4" name='Missed'> <span>4</span></label>
+                <label><input type="radio" value="5" name='Missed'> <span>5</span></label>
               </div>
             </td>
         </tr>
       </tbody>
       </table>
 
-
-        <!-- <div class="item">
-          <p>Home Address<span class="required">*</span></p>
-          <input type="text" name="name" placeholder="Street address" id="txtaddress" required/>
-          <div class="city-item">
-            <input type="text" name="name" placeholder="City" required/>
-            <input type="text" name="name" placeholder="Region" required/>
-            <input type="text" name="name" placeholder="Postal / Zip code" required/>
+          <!-- <div class="city-item">
             <select>
               <option value="">Country</option>
               <option value="1">Russia</option>
@@ -103,37 +124,29 @@
               <option value="4">Armenia</option>
               <option value="5">USA</option>
             </select>
-          </div>
-        </div>
-        <div class="item">
-          <p>Email<span class="required">*</span></p>
-          <input type="text" name="name" required/>
-        </div>
-        <div class="item">
-          <p>Phone</p>
-          <input type="text" name="name"/>
-        </div> -->
+          </div> -->
+
         <div class="question">
           <p>Did they play defense?<span class="required">*</span></p>
           <div class="question-answer">
-            <label><input type="radio" value="Defense Yes"   id="DYtxt" required/> <span>Yes</span></label>
-            <label><input type="radio" value="Defense No"   id='DNtxt' required/> <span>No</span></label>
+            <label><input type="radio" value="Defense Yes"  name='Defense' required/> <span>Yes</span></label>
+            <label><input type="radio" value="Defense No"   name='Defense' required/> <span>No</span></label>
           </div>
         </div>
         <div class="question">
           <p>Did they feed a team?<span class="required">*</span></p>
           <div class="question-answer">
-            <label><input type="radio" value="FeedBrief" id="FedB"  required/> <span>Briefly</span></label>
-            <label><input type="radio" value="FeedSome" id="FedSome" required/> <span>Some</span></label>
-            <label><input type="radio" value="FeedMost"  id="FedMost" required/> <span>Most</span></label>
+            <label><input type="radio" value="FeedBrief" name='Feed'  required/> <span>Briefly</span></label>
+            <label><input type="radio" value="FeedSome" name='Feed' required/> <span>Some</span></label>
+            <label><input type="radio" value="FeedMost"  name='Feed' required/> <span>Most</span></label>
           </div>
         </div>
         <div class="question">
           <p>Endgame Success?<span class="required">*</span></p>
           <div class="question-answer">
-            <label><input type="radio" value="EndgameYes" id="EY"required/> <span>Yes</span></label>
-            <label><input type="radio" value="EndgameNo" id="EN"required/> <span>No</span></label>
-            <label><input type="radio" value="EndgameDnA" id="EDNA"required/> <span>Did Not Attempt</span></label>
+            <label><input type="radio" value="EndgameYes" name='Endgame' required/> <span>Yes</span></label>
+            <label><input type="radio" value="EndgameNo" name='Endgame' required/> <span>No</span></label>
+            <label><input type="radio" value="EndgameDnA" name='Endgame' required/> <span>Did Not Attempt</span></label>
           </div>
         </div>
 
@@ -153,64 +166,81 @@
 
 var qrcode = new QRCode("qrcode");
 
-function makeCode () {    
+function makeCode () {
+
+  var AllianceEle = document.getElementsByName('Alliance');
+  var StartingPosEle = document.getElementsByName('StartPos');
+  var AutonLineEle = document.getElementsByName('CrossAutonLine');
+  var MadeEle = document.getElementsByName('Made');
+  var MissedEle = document.getElementsByName('Missed');
+  var HeightEle = document.getElementsByName('ScoreHeight');
+  var DefenseEle = document.getElementsByName('Defense');
+  var FeedEle = document.getElementsByName('Feed');
+  var EndgameEle = document.getElementsByName('Endgame');
+
+  var AutonPts = document.getElementById("AutonPts").value;
+
+  for(i = 0; i < AllianceEle.length; i++) {
+      if(AllianceEle[i].checked)
+      var Alliance = AllianceEle[i].value;
+  }
+  for(i = 0; i < StartingPosEle.length; i++) {
+      if(StartingPosEle[i].checked)
+      var StartingPos = StartingPosEle[i].value;
+  }
+  for(i = 0; i < AutonLineEle.length; i++) {
+      if(AutonLineEle[i].checked)
+      var AutonLine = AutonLineEle[i].value;
+  }
+  for(i = 0; i < MadeEle.length; i++) {
+      if(MadeEle[i].checked)
+      var Made = MadeEle[i].value;
+  }              
+  for(i = 0; i < MissedEle.length; i++) {
+      if(MissedEle[i].checked)
+      var Missed = MissedEle[i].value;
+  }
+  for(i = 0; i < HeightEle.length; i++) {
+      if(HeightEle[i].checked)
+      var Height = HeightEle[i].value;
+  }              
+  for(i = 0; i < DefenseEle.length; i++) {
+      if(DefenseEle[i].checked)
+      var Defense = DefenseEle[i].value;
+  }              
+  for(i = 0; i < FeedEle.length; i++) {
+      if(FeedEle[i].checked)
+      var Feed = FeedEle[i].value;
+  }              
+  for(i = 0; i < EndgameEle.length; i++) {
+      if(EndgameEle[i].checked)
+      var Endgame = EndgameEle[i].value;
+  }              
+              
+
 
         const matchNum = document.getElementById('match#txt');
         const robotNum = document.getElementById('robot#txt');
         const name = document.getElementById('nametxt');
-        // const teamRed = document.getElementById('redtxt');
-        // const teamBlue = document.getElementById('bluetxt');
-        // const startPos = document.getElementById('startmid');
-        // const initLine = document.getElementById('line');
-        // const score1 = document.getElementById('scored1');
-        // const score2 = document.getElementById('scored2');
-        // const score3 = document.getElementById('scored3');
-        // const score4 = document.getElementById('scored4');
-        // const score5 = document.getElementById('scored5');
-        // const scoreHigh = document.getElementById('Shigh');
-        // const scoreLow = document.getElementById('Slow');
-        // const Defense = document.getElementById('line');
-        // const initLine = document.getElementById('line');
-        // const initLine = document.getElementById('line');
-        // const initLine = document.getElementById('line');
-        // const initLine = document.getElementById('line');
-
-
-
+        const notes = document.getElementById('notestxt');
         
         // This variable stores all the data.
         let data =  
         matchNum.value + "," + 
         robotNum.value + "," + 
-        name.value + "," 
-        // teamRed.value + "," + 
-        // teamBlue.value + "," + 
-        // name.value + "," + 
-        // name.value + ","+ 
-        // name.value + ","+ 
-        // name.value + ","+ 
-        // name.value
+        name.value + "," +
+        Alliance + "," +
+        StartingPos + "," +
+        AutonLine + "," +
+        AutonPts + "," +
+        Made + "," +
+        Missed + "," +
+        Height + "," +
+        Defense + "," +
+        Feed + "," +
+        Endgame;
         
-
-
-        // // Convert the text to BLOB.
-        // const textToBLOB = new Blob([data], { type: 'text/plain' });
-        // const sFileName = 'formData.csv';	   // The file to save the data.
-
-        // let newLink = document.createElement("a");
-        // newLink.download = sFileName;
-
-        // if (window.webkitURL != null) {
-        //     newLink.href = window.webkitURL.createObjectURL(textToBLOB);
-        // }
-        // else {
-        //     newLink.href = window.URL.createObjectURL(textToBLOB);
-        //     newLink.style.display = "none";
-        //     document.body.appendChild(newLink);
-        // }
-
-        // newLink.click();
-        qrcode.makeCode(data);
+      qrcode.makeCode(data);
 
 }
 
