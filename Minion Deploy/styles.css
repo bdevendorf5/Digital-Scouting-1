@@ -124,7 +124,7 @@ html, body {
       justify-content: space-between;
       }
       .name-item input, .city-item input {
-      width: calc(33% - 20px);
+      width: calc(33% - 20px)
       }
       .city-item select {
       width: calc(50% - 8px);
