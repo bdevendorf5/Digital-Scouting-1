@@ -19,8 +19,75 @@
             <input type="text" name="match" placeholder="Match Number" id='match#txt' required/>
             <input type="text" name="robot" placeholder="Robot Number" id='robot#txt' required/>
             <input type="text" name="name" placeholder="Your Name" id='nametxt'required/>
+            <select name="Alliance" id="Alliance">
+              <option value="volvo">Blue</option>>
+              <option value="saab">Red</option>
+           </select>
           </div>
         </div>
+
+
+
+        <table style="width: 100%;">
+          <colgroup>
+            <col style=" width:15%;">
+            <col style=" width:30%;">
+            <col style=" width:20%;">
+            <col style=" width:15%;">
+            <col style=" width:10%;">
+          </colgroup>
+        <thead>
+          <tr>
+            <th>Auton</th>
+            <th>Taxi</th>
+            <th>Shots</th>
+            <th>Lower</th>
+            <th>Upper</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>StartingPos. Placeholder</td>
+              <td>
+                <div class="question">
+                  <input type="checkbox" id="Taxi" name='Taxi' value="Taxi-Yes">
+                  <label><input type="radio" value="2" name='Made'> <span>2</span></label>
+                  <label><input type="radio" value="3" name='Made'> <span>3</span></label>
+                  <label><input type="radio" value="4" name='Made'> <span>4</span></label>
+                  <label><input type="radio" value="5" name='Made'> <span>5</span></label>
+                </div>
+              </td>
+              <td>
+                <div class="question">
+                  <select name="AutonShot" id="AutonShot">
+                    <option value="Fender">Fender</option>
+                    <option value="Tarmac">Tarmac</option>
+                    <option value="Fender">Launchpad</option>
+                    <option value="Fender">Other</option>
+                 </select>
+                </div>
+              </td>
+              <td>
+                <input style='width:10%' type="number" value='0' id='AutonPts' min="1" max="5">
+                <input style='width:10%' type="number" value='0' id='AutonPts'>
+                <input style='width:10%' type="number" value='0' id='AutonPts'>
+                <input style='width:10%' type="number" value='0' id='AutonPts'>
+              </td>
+              <td>
+                <div class="question">
+                  <label><input type="radio" value="1" name='Missed'> <span>1</span></label>
+                  <label><input type="radio" value="2" name='Missed'> <span>2</span></label>
+                  <label><input type="radio" value="3" name='Missed'> <span>3</span></label>
+                  <label><input type="radio" value="4" name='Missed'> <span>4</span></label>
+                  <label><input type="radio" value="5" name='Missed'> <span>5</span></label>
+                </div>
+              </td>
+          </tr>
+        </tbody>
+        </table>
+
+
+
 
         <table style="width: 100%;">
           <colgroup>

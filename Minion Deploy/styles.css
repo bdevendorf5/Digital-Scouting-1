@@ -91,7 +91,7 @@ html, body {
       .question input {
       width: auto;
       margin: 0;
-      border-radius: 50%;
+      border-radius: 20%;
       }
       .question input, .question span {
       vertical-align: middle;
@@ -145,6 +145,7 @@ html, body {
       
       td {
             text-align:center;
+            border: 1px solid black;
       }
 
       .checkboxes label {
@@ -159,6 +160,7 @@ html, body {
       .checkboxes label span {
       vertical-align: middle;
       }
+
 
         
 
