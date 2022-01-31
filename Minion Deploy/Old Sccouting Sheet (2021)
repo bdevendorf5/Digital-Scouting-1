@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>FRC 2791 Scouting Sheet</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+<script type="text/javascript" src="jquery.min.js"></script>
+<script type="text/javascript" src="qrcode.js"></script>    
+  </head>
+  <body>
+    <div class="testbox">
+      <form action="/">
+        <div class="banner">
+          <h1>Team 2791 Digital Scouting Sheet 2021</h1>
+        </div>
+        <div class="item">
+          <div class="name-item">
+            <input type="text" name="match" placeholder="Match Number" id='match#txt' required/>
+            <input type="text" name="robot" placeholder="Robot Number" id='robot#txt' required/>
+            <input type="text" name="name" placeholder="Your Name" id='nametxt'required/>
+          </div>
+        </div>
+
+        <table style="width: 100%;">
+          <colgroup>
+            <col style=" width:10%;">
+            <col style=" width:40%;">
+            <col style=" width:10%;">
+            <col style=" width:40%;">
+          </colgroup>
+        <thead>
+          <tr>
+            <th>Alliance Color</th>
+            <th>Starting Position</th>
+            <th>Crossed Auton Line</th>
+            <th>Autonomus Pts.</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <div class="question">
+              <label><input type="radio" value="Red" name='Alliance'> <span>Red</span></label>
+              <label><input type="radio" value="Blue" name='Alliance'> <span>Blue</span></label>
+            </div>
+          </td>
+              <td>
+                <div class="question">
+                  <label><input type="radio" value="Left" name='StartPos'> <span>L</span></label>
+                  <label><input type="radio" value="Left Middle" name='StartPos'> <span>LM</span></label>
+                  <label><input type="radio" value="Middle" name='StartPos'> <span>M</span></label>
+                  <label><input type="radio" value="Right Middle" name='StartPos'> <span>RM</span></label>
+                  <label><input type="radio" value="Right" name='StartPos'> <span>R</span></label>
+                </div>
+              </td>
+              <td>
+                <div class="question">
+                  <label style="color:black"><input type="radio" value="Yes" name='CrossAutonLine'> <span>Yes</span></label>
+                  <label style="color:black"><input type="radio" value="No" name='CrossAutonLine'> <span>No</span></label>
+                </div>
+              </td>
+              <td>
+                <div>
+                  <input style='width:10%' type="number" value='0' id='AutonPts' >
+                </div>
+              </td>
+          </tr>
+        </tbody>
+        </table>
+
+      <table style="width: 100%;">
+        <colgroup>
+          <col style=" width:4%;">
+          <col style=" width:40%;">
+          <col style=" width:16%;">
+          <col style=" width:40%;">
+        </colgroup>
+      <thead>
+        <tr>
+          <th>Cycles</th>
+          <th>Made</th>
+          <th>Height</th>
+          <th>Missed</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+            <td>
+              <div class="question">
+                <label><input type="radio" value="1" name='Made'> <span>1</span></label>
+                <label><input type="radio" value="2" name='Made'> <span>2</span></label>
+                <label><input type="radio" value="3" name='Made'> <span>3</span></label>
+                <label><input type="radio" value="4" name='Made'> <span>4</span></label>
+                <label><input type="radio" value="5" name='Made'> <span>5</span></label>
+              </div>
+            </td>
+            <td>
+              <div class="question">
+                <label style="color:black"><input type="radio" value="scored high" name='ScoreHeight'> <span>High</span></label>
+                <label style="color:black"><input type="radio" value="scored low" name='ScoreHeight'> <span>Low</span></label>
+              </div>
+            </td>
+            <td>
+              <div class="question">
+                <label><input type="radio" value="1" name='Missed'> <span>1</span></label>
+                <label><input type="radio" value="2" name='Missed'> <span>2</span></label>
+                <label><input type="radio" value="3" name='Missed'> <span>3</span></label>
+                <label><input type="radio" value="4" name='Missed'> <span>4</span></label>
+                <label><input type="radio" value="5" name='Missed'> <span>5</span></label>
+              </div>
+            </td>
+        </tr>
+      </tbody>
+      </table>
+
+          <!-- <div class="city-item">
+            <select>
+              <option value="">Country</option>
+              <option value="1">Russia</option>
+              <option value="2">Germany</option>
+              <option value="3">France</option>
+              <option value="4">Armenia</option>
+              <option value="5">USA</option>
+            </select>
+          </div> -->
+
+        <div class="question">
+          <p>Did they play defense?<span class="required">*</span></p>
+          <div class="question-answer">
+            <label><input type="radio" value="Defense Yes"  name='Defense' required/> <span>Yes</span></label>
+            <label><input type="radio" value="Defense No"   name='Defense' required/> <span>No</span></label>
+          </div>
+        </div>
+        <div class="question">
+          <p>Did they feed a team?<span class="required">*</span></p>
+          <div class="question-answer">
+            <label><input type="radio" value="FeedBrief" name='Feed'  required/> <span>Briefly</span></label>
+            <label><input type="radio" value="FeedSome" name='Feed' required/> <span>Some</span></label>
+            <label><input type="radio" value="FeedMost"  name='Feed' required/> <span>Most</span></label>
+          </div>
+        </div>
+        <div class="question">
+          <p>Endgame Success?<span class="required">*</span></p>
+          <div class="question-answer">
+            <label><input type="radio" value="EndgameYes" name='Endgame' required/> <span>Yes</span></label>
+            <label><input type="radio" value="EndgameNo" name='Endgame' required/> <span>No</span></label>
+            <label><input type="radio" value="EndgameDnA" name='Endgame' required/> <span>Did Not Attempt</span></label>
+          </div>
+        </div>
+
+        <div style="width: 100%;">
+            <input type="text" name="notes" placeholder="Notes" id='notes#txt' required/>
+        </div>
+
+        <div>
+          <input type="button" id="bt" value="Create QR Code" onclick="makeCode()" />
+        </div>
+      </form>
+    </div>
+</div>
+<div id="qrcode"></div>
+</body>
+<script>
+
+var qrcode = new QRCode("qrcode");
+
+function makeCode () {
+
+  var AllianceEle = document.getElementsByName('Alliance');
+  var StartingPosEle = document.getElementsByName('StartPos');
+  var AutonLineEle = document.getElementsByName('CrossAutonLine');
+  var MadeEle = document.getElementsByName('Made');
+  var MissedEle = document.getElementsByName('Missed');
+  var HeightEle = document.getElementsByName('ScoreHeight');
+  var DefenseEle = document.getElementsByName('Defense');
+  var FeedEle = document.getElementsByName('Feed');
+  var EndgameEle = document.getElementsByName('Endgame');
+
+  var AutonPts = document.getElementById("AutonPts").value;
+
+  for(i = 0; i < AllianceEle.length; i++) {
+      if(AllianceEle[i].checked)
+      var Alliance = AllianceEle[i].value;
+  }
+  for(i = 0; i < StartingPosEle.length; i++) {
+      if(StartingPosEle[i].checked)
+      var StartingPos = StartingPosEle[i].value;
+  }
+  for(i = 0; i < AutonLineEle.length; i++) {
+      if(AutonLineEle[i].checked)
+      var AutonLine = AutonLineEle[i].value;
+  }
+  for(i = 0; i < MadeEle.length; i++) {
+      if(MadeEle[i].checked)
+      var Made = MadeEle[i].value;
+  }              
+  for(i = 0; i < MissedEle.length; i++) {
+      if(MissedEle[i].checked)
+      var Missed = MissedEle[i].value;
+  }
+  for(i = 0; i < HeightEle.length; i++) {
+      if(HeightEle[i].checked)
+      var Height = HeightEle[i].value;
+  }              
+  for(i = 0; i < DefenseEle.length; i++) {
+      if(DefenseEle[i].checked)
+      var Defense = DefenseEle[i].value;
+  }              
+  for(i = 0; i < FeedEle.length; i++) {
+      if(FeedEle[i].checked)
+      var Feed = FeedEle[i].value;
+  }              
+  for(i = 0; i < EndgameEle.length; i++) {
+      if(EndgameEle[i].checked)
+      var Endgame = EndgameEle[i].value;
+  }              
+              
+
+
+        const matchNum = document.getElementById('match#txt');
+        const robotNum = document.getElementById('robot#txt');
+        const name = document.getElementById('nametxt');
+        const notes = document.getElementById('notestxt');
+        
+        // This variable stores all the data.
+        let data =  
+        matchNum.value + "," + 
+        robotNum.value + "," + 
+        name.value + "," +
+        Alliance + "," +
+        StartingPos + "," +
+        AutonLine + "," +
+        AutonPts + "," +
+        Made + "," +
+        Missed + "," +
+        Height + "," +
+        Defense + "," +
+        Feed + "," +
+        Endgame + "," +
+        notes.value;
+        
+      qrcode.makeCode(data);
+
+}
+
+makeCode();
+
+$("#text").
+  on("blur", function () {
+    makeCode();
+  }).
+  on("keydown", function (e) {
+    if (e.keyCode == 13) {
+      makeCode();
+    }
+  });
+
+</script>
+
+
+</html>
+© 2022 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Docs
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
